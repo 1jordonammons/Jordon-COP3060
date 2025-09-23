@@ -1,19 +1,19 @@
 
 body {
-    font-family: Arial, Helvetica, sans-serif; /* Consistent font */
+    font-family: Arial, Helvetica, sans-serif;  
     margin: 20px;
     padding: 10px;
-    background-color: #f9f9f9;
+    background-color: #f2ebeb;
 }
 
 
 h1 {
-    color: darkblue; 
+    color: rgb(162, 42, 5); 
     text-align: center;
 }
 
 h2 {
-    color: darkgreen;  
+    color: rgb(198, 78, 34);  
 }
 
 h3 {
@@ -21,13 +21,13 @@ h3 {
 }
  
 .highlight {
-    color: orange;  
+    color: rgb(238, 238, 237);  
     font-weight: bold;
 }
 
  
 #special {
-    background-color: yellow;
+    background-color: rgb(245, 245, 245);
     padding: 10px;
     border: 2px solid black;
 }
@@ -36,6 +36,6 @@ h3 {
 p {
     margin: 15px 0;
     padding: 10px;
-    background-color: #eaf4fc;
+    background-color: #607281;
     border-radius: 5px;
 }
