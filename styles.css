@@ -1,0 +1,41 @@
+
+body {
+    font-family: Arial, Helvetica, sans-serif; /* Consistent font */
+    margin: 20px;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+
+h1 {
+    color: darkblue; 
+    text-align: center;
+}
+
+h2 {
+    color: darkgreen;  
+}
+
+h3 {
+    color: darkred;
+}
+ 
+.highlight {
+    color: orange;  
+    font-weight: bold;
+}
+
+ 
+#special {
+    background-color: yellow;
+    padding: 10px;
+    border: 2px solid black;
+}
+
+ 
+p {
+    margin: 15px 0;
+    padding: 10px;
+    background-color: #eaf4fc;
+    border-radius: 5px;
+}
