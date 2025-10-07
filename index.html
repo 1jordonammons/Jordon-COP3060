@@ -2,71 +2,72 @@
 <html lang="en">
 <head>
     <title>My Introduction Page</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
     <header>
         <h1>Welcome To My Page!</h1>
-         <link rel="stylesheet" href="styles.css">
     </header>
 
- 
     <h2 id="special">About Me</h2> 
-
-<p class="highlight">
-    Hello, I am Jordon Ammons. I’m a student leader and CS scholar who enjoys building community on campus 
-    and exploring different software projects in my free time. I also love going to the gym and meeting new people. 
-    I’m passionate about creating spaces where people feel supported and motivated, whether through leadership roles, 
-    mentoring, or working on projects that bring value to others. One day, I hope to get a software engineering or 
-    product management job. A fun fact about me is that I ran in the Junior Olympics when I was younger.
-</p> 
-
+    <p class="highlight">
+        Hello, I am Jordon Ammons. I’m a student leader and CS scholar who enjoys building community on campus 
+        and exploring different software projects in my free time. I also love going to the gym and meeting new people. 
+        I’m passionate about creating spaces where people feel supported and motivated, whether through leadership roles, 
+        mentoring, or working on projects that bring value to others. One day, I hope to get a software engineering or 
+        product management job. A fun fact about me is that I ran in the Junior Olympics when I was younger.
+    </p> 
 
     <section> 
         <h2>Who is on this page?</h2>
+        <form id="whoForm">
+            <fieldset>
+                <label for="firstName">First Name:</label>
+                <input type="text" id="firstName" name="firstName"><br><br>
+                
+                <label for="lastName">Last Name:</label>
+                <input type="text" id="lastName" name="lastName"><br><br>
+                
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email"><br><br>
+                
+                <label for="password">Password:</label>
+                <input type="password" id="password" name="password"><br><br>
 
-        <fieldset>
-            <label for="firstName">First Name:</label>
-            <input type="text" id="firstName" name="firstName"><br><br>
-            
-            <label for="lastName">Last Name:</label>
-            <input type="text" id="lastName" name="lastName"><br><br>
-            
-            <label for="email">Email:</label>
-            <input type="email" id="email" name="email"><br><br>
-            
-            <label for="password">Password:</label>
-            <input type="password" id="password" name="password"><br><br>
+                <label>Do you like my site?</label>
+                <input type="radio" id="yes" name="like" value="yes">
+                <label for="yes">Yes</label>
+                <input type="radio" id="no" name="like" value="no">
+                <label for="no">No</label>
+                <br>
 
-            
-             
-            <label>Do you like my site?</label>
-            <input type="radio" id="yes" name="like" value="yes">
-            <label for="yes">Yes</label>
-            <input type="radio" id="no" name="like" value="no">
-            <label for="no">No</label>
-             
-            <br>
-            
-            <label>
-                <input type="checkbox" name="subscribe" value="yes"> Subscribe to newsletter
-            </label>
-            <br><br>
+                <label>
+                    <input type="checkbox" name="subscribe" value="yes"> Subscribe to newsletter
+                </label>
+                <br><br>
 
-            <label for="browser">Which browser do you use?</label>
-            <select id="browser" name="browser">
-                <option value="chrome">Chrome</option>
-                <option value="firefox">Firefox</option>
-                <option value="safari">Safari</option>
-                <option value="edge">Edge</option>
-                <option value="other">Other</option>
-            </select>
-            <br><br>
-         
-            <button type="submit">Submit</button>
-        </fieldset>
+                <label for="browser">Which browser do you use?</label>
+                <select id="browser" name="browser">
+                    <option value="chrome">Chrome</option>
+                    <option value="firefox">Firefox</option>
+                    <option value="safari">Safari</option>
+                    <option value="edge">Edge</option>
+                    <option value="other">Other</option>
+                </select>
+                <br><br>
+
+                <button type="submit">Submit</button>
+                <div id="status" aria-live="polite" style="margin-top:8px;"></div>
+            </fieldset>
+        </form>
     </section>
 
- <section>
+    <section>
+        <h3>Quick Tips (rendered from JavaScript)</h3>
+        <ul id="localList"></ul>
+    </section>
+
+    <section>
         <h3>My Favorite Things with specifics</h3>
         <table border="1" cellpadding="6" cellspacing="0">
           <thead>
@@ -95,5 +96,21 @@
           </tbody>
         </table>
     </section>
+
+    <section>
+        <h3>Public Data</h3>
+        <div class="controls">
+            <button id="loadBtn" type="button">Load Data</button>
+            <input id="searchInput" type="text" placeholder="Filter by title…">
+            <select id="sortSelect">
+                <option value="az">Title A–Z</option>
+                <option value="za">Title Z–A</option>
+            </select>
+        </div>
+        <div id="fetchStatus" aria-live="polite" style="margin-top:8px;"></div>
+        <ul id="results"></ul>
+    </section>
+
+    <script src="app.js" defer></script>
 </body>
 </html>
